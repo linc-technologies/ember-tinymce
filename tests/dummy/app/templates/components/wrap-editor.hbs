@@ -1,0 +1,12 @@
+{{#if isShowingModal}}
+  {{#modal-dialog
+    translucentOverlay=true
+    targetAttachment="center"
+  }}
+    {{tinymce-editor options=options value=value onValueChanged=onValueChanged}}
+    <button {{action "toggleModal"}}>Toggle modal</button>
+  {{/modal-dialog}}
+{{/if}}
+
+<button {{action "toggleModal"}}>Toggle modal</button>
+

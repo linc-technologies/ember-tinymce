@@ -1,0 +1,18 @@
+{{wrap-editor
+  options=options
+  value=demoText
+  onValueChanged=(action (mut demoText))
+}}
+<button type="button" name="button" {{action "toggleMenu"}}>
+  Toggle Menu
+</button>
+
+{{tinymce-editor
+  options=options
+  value=demoText
+  onValueChanged=(action (mut demoText))
+}}
+
+<div>
+  {{displayText}}
+</div>
