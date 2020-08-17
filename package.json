@@ -59,8 +59,7 @@
     "node": "6.* || 8.* || >= 10.*"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config",
-    "demoURL": "http://Linc-Technologies.github.io/ember-tinymce"
+    "configPath": "tests/dummy/config"
   },
   "repository": {
     "type": "git",
