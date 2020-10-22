@@ -98,6 +98,28 @@ beforeModel(){
 }
 ```
 
+### Subresource Integrity (SRI Hash)
+This addon supports bring-your-own SRI Hash validation for ensuring the scripts
+provided to users haven't been maliciously changed.
+
+You can configure this in your app's environment settings:
+
+```js
+ENV:{
+  ...,
+  tinyMCE:{
+    apiKey: 'my-api-key',
+    version: '5.4.1-89', //default 5.4.1
+    sriHash: 'sha256-ITVSXTRj8rUxWZ+XNuqcozwzPpG6XQB2doC/vz5FfjI= sha384-KW7FdwkWUxvYBq9xLaE8aybRBHrjZVXUqj9qb2je0hMf9T89n5mSpS1yuYti2G5X sha512-mgWyCXMylJaTTsc+KyUWTdCkXVirb9RYV2ZC+ABlOjyNUnUCymbELQAw5KUBNyaD9zZOkdqYYIDf5JSSpjnelg=='
+  }
+}
+```
+
+If you are using tiny cloud, the easiest way to generate this string is to add
+`report-uri.com` as a trusted domain. Then using your generated URI (with API 
+key and TinyMCE version) head to [Create your SRI hash](https://report-uri.com/home/sri_hash)
+to obtain your SRI hash.
+
 ## Thankyou
 
 Thank you to [marucjmar/ember-cli-tinymce](https://marucjmar/ember-cli-tinymce)
