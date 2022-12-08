@@ -1,6 +1,6 @@
 {
   "name": "ember-tinymce",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "An ember addon to bring TinyMCE v5 to ambitious applications!",
   "keywords": [
     "ember-addon",
@@ -11,7 +11,7 @@
     "editor",
     "tinymce"
   ],
-  "license": "LGPL-2.1",
+  "license": "MIT",
   "author": "Matthew Hartstonge",
   "directories": {
     "doc": "doc",
