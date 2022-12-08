@@ -1,6 +1,6 @@
 # ember-tinymce 📃
 
-This addon provides [TinyMCE v5](https://www.tinymce.com/) (a wysiwyg-editor) as an ember component. 
+This addon provides [TinyMCE v6](https://www.tinymce.com/) (a wysiwyg-editor) as an ember component. 
 
 ## Installation
 To get started simply install the addon:
