@@ -68,7 +68,7 @@ ENV:{
   ...,
   tinyMCE:{
     apiKey: 'my-api-key',
-    version: '5.2' //default 5.4.1
+    version: '6.0' //default 6.3.1-12
   }
 }
 ```
@@ -87,13 +87,13 @@ ENV:{
 }
 ```
 
-You can then load TinyMCE, as required, in your routes like so (using JQuery integration):
+You can then load TinyMCE, as required, in your routes like so (example uses JQuery integration):
 
 ```js
 beforeModel(){
   this._super(...arguments);
   if (typeof tinymce == 'undefined'){
-    return this.$().getScript('https://cdn.tiny.cloud/1/my-api-key/tinymce/5.4.1/tinymce.min.js');
+    return this.$().getScript('https://cdn.tiny.cloud/1/my-api-key/tinymce/6.3.1-12/tinymce.min.js');
   }
 }
 ```
@@ -108,9 +108,9 @@ You can configure this in your app's environment settings:
 ENV:{
   ...,
   tinyMCE:{
-    apiKey: 'my-api-key',
-    version: '5.4.1-89', //default 5.4.1
-    sriHash: 'sha256-ITVSXTRj8rUxWZ+XNuqcozwzPpG6XQB2doC/vz5FfjI= sha384-KW7FdwkWUxvYBq9xLaE8aybRBHrjZVXUqj9qb2je0hMf9T89n5mSpS1yuYti2G5X sha512-mgWyCXMylJaTTsc+KyUWTdCkXVirb9RYV2ZC+ABlOjyNUnUCymbELQAw5KUBNyaD9zZOkdqYYIDf5JSSpjnelg=='
+    apiKey: 'no-api-key',
+    version: '6.0.3-5', // default 6.3.1-12
+    sriHash: 'sha256-uDkApJhas9elGSPVPNPL0G7Bx1ByJXaLs/pHRWw+jiQ= sha384-XiP+FxwEyDw3bQ3oaYepXptVvd2GnmhcTYXv/QEQzMxL2nP9//HSOnOLp5mSUpLU sha512-eMxKG/y1PO1+chyji1h9Jkf2j9MP5UOP8szi1IIjRTdzG6Bak2kw3VpQ54hn4sUauEbOWoDFH87ecw4Y/YYj2w=='
   }
 }
 ```
