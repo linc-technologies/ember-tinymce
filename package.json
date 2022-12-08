@@ -1,7 +1,7 @@
 {
   "name": "ember-tinymce",
-  "version": "0.2.0",
-  "description": "An ember addon to bring TinyMCE v5 to ambitious applications!",
+  "version": "0.2.2",
+  "description": "An ember addon to bring TinyMCE v6 to ambitious applications!",
   "keywords": [
     "ember-addon",
     "emberjs",
