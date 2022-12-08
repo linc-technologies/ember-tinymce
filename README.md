@@ -126,15 +126,14 @@ Thank you to [marucjmar/ember-cli-tinymce](https://marucjmar/ember-cli-tinymce)
 for providing the basis of this updated implementation.
 Please send a :star: his way.
 
-## LGPLv2.1 License
+## MIT License
 
-Much like TinyMCE, we decided to follow suit and use the LGPL v2.1 license. 
+Much like TinyMCE, we decided to follow suit and use the MIT license. 
 
 A quick overview:
 - This addon can be used in proprietary software, free of charge. 
-- Unlike GPL-licenses, you _do not_ have to Open Source your proprietary code.
-- Though, if you make any improvements or modifications to this library, it must
-  be open-sourced for the benefit to all.
+- You can do whatever you want as long as you include the original copyright 
+  and license notice in any copy of the software/source.
 
 For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
 
