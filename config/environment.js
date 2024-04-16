@@ -6,7 +6,8 @@ module.exports = function(/* environment, appConfig */) {
       load: true,
       apiKey: 'no-api-key',
       version: '6.3.1-12',
-      sriHash: ''
+      sriHash: '',
+      selfHostedPath: ''
     }
   };
 };
