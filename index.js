@@ -8,7 +8,13 @@ module.exports = {
     let content = '';
 
     if (type === 'head-footer' && config['tinyMCE'] && config['tinyMCE']['load']) {
-      let src = `https://cdn.tiny.cloud/1/${config['tinyMCE']['apiKey']}/tinymce/${config['tinyMCE']['version']}/tinymce.min.js`;
+
+      let src = '';
+      if (config['tinyMCE']['selfHostedPath'] !== '') {
+        src = config['tinyMCE']['selfHostedPath']
+      } else {
+        src = `https://cdn.tiny.cloud/1/${config['tinyMCE']['apiKey']}/tinymce/${config['tinyMCE']['version']}/tinymce.min.js`;
+      }
 
       let sriHash = '';
       if (config['tinyMCE']['sriHash'] !== '') {

@@ -61,6 +61,16 @@ Or, as a shorthand using the `mut` helper:
 
 ### Including TinyMCE
 
+TinyMCE can be used in your project by using the version from their CDN ([cloud deployment](https://www.tiny.cloud/docs/tinymce/latest/cloud-deployment-guide/))
+or you can serve the assets yourself ([self hosted](https://www.tiny.cloud/docs/tinymce/latest/zip-install/)).
+
+Using the self-hosted version has extra requirements depending on the version you are using. For example, in version 6.0
+the license for the source code was MIT, and has since been changed to GPL2 for 7.0. This [blog post](https://www.tiny.cloud/blog/tinymce-free-wysiwyg-html-editor/#h_20985795323301710993368773)
+by tiny explains a little bit about what this may mean for your own project. It is recommended that you seek full understanding
+of your obligations when using TinyMCE, ensuring that you seek legal advice where clarification is necessary (This is not legal advice.)
+
+#### Cloud Version
+
 You can load TinyMCE using a free API Key by signing up for [tiny's CDN](https://www.tiny.cloud/):
 
 ```js
@@ -95,6 +105,27 @@ beforeModel(){
   if (typeof tinymce == 'undefined'){
     return this.$().getScript('https://cdn.tiny.cloud/1/my-api-key/tinymce/6.3.1-12/tinymce.min.js');
   }
+}
+```
+
+#### Self Hosting
+
+This ember addon does not include the ability to retrieve a version of TinyMCE at build time, so you will have to 
+retrieve a copy of TinyMCE via another means. We recommend either:
+
+ - [Installing via NPM](https://www.tiny.cloud/docs/tinymce/6/npm-projects/)
+ - [Installing via ZIP](https://www.tiny.cloud/docs/tinymce/6/zip-install/)
+
+The plugin can then be configured with a path to the main javascript file, which will change where the script is loaded from.
+The following example is for a project that has the TinyMCE assets included in the `./public/assets` folder that are served
+alongside the main app
+
+```js
+ENV:{
+  ...,
+  tinyMCE: {
+    selfHostedPath: '/assets/tinymce_6.7.1/js/tinymce/tinymce.min.js',
+  },
 }
 ```
 
