@@ -2,7 +2,7 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-tinymce',
+  name: require('./package').name,
 
   contentFor: function (type, config) {
     let content = '';

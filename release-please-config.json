@@ -1,7 +1,7 @@
 {
   "packages": {
     ".": {
-      "package-name": "ember-tinymce",
+      "package-name": "@linc-technologies/ember-tinymce",
       "changelog-path": "CHANGELOG.md",
       "release-type": "node",
       "bump-minor-pre-major": false,
