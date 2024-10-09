@@ -19,6 +19,7 @@
   },
   "scripts": {
     "build": "ember build",
+    "ci": "yarn install --ignore-engines --frozen-lockfile",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "start": "ember serve",
