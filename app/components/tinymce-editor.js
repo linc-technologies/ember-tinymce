@@ -1,1 +1,1 @@
-export { default } from 'ember-tinymce/components/tinymce-editor';
+export { default } from '@linc-technologies/ember-tinymce/components/tinymce-editor';
