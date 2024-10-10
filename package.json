@@ -1,6 +1,6 @@
 {
   "name": "@linc-technologies/ember-tinymce",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "An ember addon to bring TinyMCE v6 to ambitious applications!",
   "keywords": [
     "ember-addon",
