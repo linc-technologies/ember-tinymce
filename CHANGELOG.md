@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/linc-technologies/ember-tinymce/compare/ember-tinymce-v0.4.0...ember-tinymce-v0.4.1) (2025-02-21)
+
+
+### Bug Fixes
+
+* **deps:** mitigates against CVE-2023-45133. ([#47](https://github.com/linc-technologies/ember-tinymce/issues/47)) ([a922614](https://github.com/linc-technologies/ember-tinymce/commit/a92261425994ecc33926db708719a4aebd522b48))
+
 ## [0.4.0](https://github.com/linc-technologies/ember-tinymce/compare/ember-tinymce-v0.3.0...ember-tinymce-v0.4.0) (2024-10-09)
 
 
