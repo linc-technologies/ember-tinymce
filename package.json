@@ -57,24 +57,25 @@
     "qunit-dom": "^0.8.0"
   },
   "resolutions": {
+    "**/fsevents": "npm:empty-npm-package@1.0.0",
     "@babel/core": "^7.26.9",
-    "@babel/traverse": "^7.26.9",
-    "@babel/types": "^7.26.9",
+    "@babel/helper-define-polyfill-provider": "^0.4.3",
     "@babel/plugin-transform-runtime": "^7.26.9",
     "@babel/preset-env": "^7.26.9",
-    "@babel/helper-define-polyfill-provider": "^0.4.3",
+    "@babel/traverse": "^7.26.9",
+    "@babel/types": "^7.26.9",
+    "ansi-html": "0.0.8",
     "babel-plugin-polyfill-corejs2": "^0.4.6",
     "babel-plugin-polyfill-corejs3": "^0.8.5",
     "babel-plugin-polyfill-es-shims": "^0.10.0",
     "babel-plugin-polyfill-regenerator": "^0.5.3",
-    "**/fsevents": "npm:empty-npm-package@1.0.0",
-    "cross-spawn": "7.0.5",
-    "path-to-regexp": "0.1.12",
-    "ansi-html": "0.0.8",
     "braces": "3.0.3",
+    "cross-spawn": "7.0.5",
+    "http-cache-semantics": "4.1.1",
     "json5": "1.0.2",
-    "terser": "4.8.1",
-    "http-cache-semantics": "4.1.1"
+    "merge": "^2.1.1",
+    "path-to-regexp": "0.1.12",
+    "terser": "4.8.1"
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
