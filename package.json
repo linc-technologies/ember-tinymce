@@ -78,7 +78,8 @@
     "path-to-regexp": "0.1.12",
     "terser": "4.8.1",
     "markdown-it": "12.3.2",
-    "micromatch": "4.0.8"
+    "micromatch": "4.0.8",
+    "got": "11.8.5"
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
