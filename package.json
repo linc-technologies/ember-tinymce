@@ -79,7 +79,8 @@
     "merge": "^2.1.1",
     "micromatch": "4.0.8",
     "path-to-regexp": "0.1.12",
-    "terser": "4.8.1"
+    "terser": "4.8.1",
+    "clean-css": "4.1.11"
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
