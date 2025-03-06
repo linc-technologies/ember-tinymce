@@ -71,6 +71,7 @@
     "babel-plugin-polyfill-es-shims": "^0.10.0",
     "babel-plugin-polyfill-regenerator": "^0.5.3",
     "braces": "3.0.3",
+    "clean-css": "^4.1.11",
     "cross-spawn": "7.0.5",
     "got": "11.8.5",
     "http-cache-semantics": "4.1.1",
