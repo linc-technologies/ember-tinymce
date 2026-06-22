@@ -1,0 +1,109 @@
+name: "Publish"
+
+on:
+  workflow_call:
+    inputs:
+      backport:
+        type: boolean
+        default: false
+        required: false
+        description: "Whether this release is a backport."
+      node_version:
+        default: "24"
+        type: string
+        required: false
+        description: 'The version of node to configure and use.'
+      prerelease:
+        type: boolean
+        default: false
+        required: false
+        description: |
+          Whether this release is a prerelease. If true, then the npm publish command will have the prerelease tag
+          passed in in order to override it being tagged as `latest`."
+      public:
+        type: boolean
+        default: false
+        required: false
+        description: |
+          Whether the package should be published to the public NPM registry as well.
+
+jobs:
+  publish_github_packages:
+    name: "Publish (Github Packages)"
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: ${{ inputs.node_version }}
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
+          registry-url: 'https://npm.pkg.github.com'
+
+      - name: "Install Dependencies (yarn)"
+        id: install_dependencies_yarn
+        run: yarn run ci
+
+      - name: "Publish Pre-release (github packages)"
+        id: publish_prerelease_yarn
+        if: ${{ inputs.prerelease }}
+        run: |
+          TAG=$(jq -r '.version | split("-")[1] | split(".")[0]' package.json)
+          yarn publish --tag=$TAG
+
+      - name: "Publish Backport (github packages)"
+        id: publish_backport_yarn
+        if: ${{ inputs.backport }}
+        run: |
+          TAG=$(jq -r .version package.json)
+          MAJOR=$(jq -r '.version | split(".")[0]' package.json)
+          yarn publish --new-version=$TAG --tag="v${MAJOR}-backport"
+
+      - name: "Publish (github packages)"
+        id: publish_yarn
+        if: ${{ steps.publish_prerelease_yarn.outcome == 'skipped' && steps.publish_backport_yarn.outcome == 'skipped' }}
+        run: yarn publish
+
+  publish_npm:
+    name: "Publish (NPM)"
+    runs-on: ubuntu-latest
+    if: ${{ inputs.public }}
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: ${{ inputs.node_version }}
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: "Install Dependencies (yarn)"
+        id: install_dependencies_yarn
+        run: yarn run ci
+
+      - name: "Publish Pre-release (npm)"
+        id: publish_prerelease_npm
+        if: ${{ inputs.prerelease }}
+        run: |
+          TAG=$(jq -r '.version | split("-")[1] | split(".")[0]' package.json)
+          npm publish --ignore-scripts --access=public --provenance --tag=$TAG --@linc-technologies:registry='https://registry.npmjs.org'
+
+      - name: "Publish Backport (npm)"
+        id: publish_backport_npm
+        if: ${{ inputs.backport }}
+        run: |
+          MAJOR=$(jq -r '.version | split(".")[0]' package.json)
+          npm publish --ignore-scripts --access=public --provenance --tag="v${MAJOR}-backport" --@linc-technologies:registry='https://registry.npmjs.org'
+
+      - name: "Publish (npm)"
+        id: publish_npm
+        if: ${{ steps.publish_prerelease_npm.outcome == 'skipped' && steps.publish_backport_npm.outcome == 'skipped' }}
+        run: npm publish --ignore-scripts --access=public --provenance --@linc-technologies:registry='https://registry.npmjs.org'
