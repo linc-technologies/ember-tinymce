@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.5.0](https://github.com/linc-technologies/ember-tinymce/compare/ember-tinymce-v0.4.2...ember-tinymce-v0.5.0) (2026-06-22)
+
+
+### Features
+
+* **hero-13394:** new resolutions ([a1e008b](https://github.com/linc-technologies/ember-tinymce/commit/a1e008b5be07e4646f120f9342353d9a0f1fce7a))
+* **hero-13394:** new resolutions ([#67](https://github.com/linc-technologies/ember-tinymce/issues/67)) ([e8602f5](https://github.com/linc-technologies/ember-tinymce/commit/e8602f5f8b846bea0da1c78f99b9a6963ccd5689))
+* **hero-13394:** new resolutions pt 2 ([973285d](https://github.com/linc-technologies/ember-tinymce/commit/973285d54c86830faa9d3bf862eb41aaa4a05097))
+
 ## [0.4.2](https://github.com/linc-technologies/ember-tinymce/compare/ember-tinymce-v0.4.1...ember-tinymce-v0.4.2) (2026-06-21)
 
 
