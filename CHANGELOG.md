@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/linc-technologies/ember-tinymce/compare/ember-tinymce-v0.5.0...ember-tinymce-v0.5.1) (2026-06-22)
+
+
+### Bug Fixes
+
+* **cicd:** fixes npm publishing. ([#69](https://github.com/linc-technologies/ember-tinymce/issues/69)) ([1686e1d](https://github.com/linc-technologies/ember-tinymce/commit/1686e1d238dc7cb8604a3777578f58b62942668a))
+
 ## [0.5.0](https://github.com/linc-technologies/ember-tinymce/compare/ember-tinymce-v0.4.2...ember-tinymce-v0.5.0) (2026-06-22)
 
 
