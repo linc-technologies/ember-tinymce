@@ -53,15 +53,16 @@ jobs:
         id: publish_prerelease_yarn
         if: ${{ inputs.prerelease }}
         run: |
-          TAG=$(cat package.json | jq '.version' | sed -e 's/".*-\(.*\)"/\1/g')
+          TAG=$(jq -r '.version | split("-")[1] | split(".")[0]' package.json)
           yarn publish --tag=$TAG
 
       - name: "Publish Backport (github packages)"
         id: publish_backport_yarn
         if: ${{ inputs.backport }}
         run: |
-          TAG=$(cat package.json| jq -r .version)
-          yarn publish --new-version=$TAG
+          TAG=$(jq -r .version package.json)
+          MAJOR=$(jq -r '.version | split(".")[0]' package.json)
+          yarn publish --new-version=$TAG --tag="v${MAJOR}-backport"
 
       - name: "Publish (github packages)"
         id: publish_yarn
