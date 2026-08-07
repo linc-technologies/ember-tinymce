@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.6.0](https://github.com/linc-technologies/ember-tinymce/compare/ember-tinymce-v0.5.0...ember-tinymce-v0.6.0) (2026-08-07)
+
+
+### Features
+
+* **hero-13713:** CVEs fixes ([a919d4a](https://github.com/linc-technologies/ember-tinymce/commit/a919d4aad77f6d5b479d588c34400f870df27528))
+* **hero-13713:** CVEs fixes ([#80](https://github.com/linc-technologies/ember-tinymce/issues/80)) ([496babe](https://github.com/linc-technologies/ember-tinymce/commit/496babe8850e10239bf3edbbc4f404522fc84544))
+
+
+### Bug Fixes
+
+* **cicd:** fixes npm publishing. ([#69](https://github.com/linc-technologies/ember-tinymce/issues/69)) ([1686e1d](https://github.com/linc-technologies/ember-tinymce/commit/1686e1d238dc7cb8604a3777578f58b62942668a))
+* **deps:** bump websocket-driver from 0.7.4 to 0.7.5 ([#74](https://github.com/linc-technologies/ember-tinymce/issues/74)) ([bdfacf7](https://github.com/linc-technologies/ember-tinymce/commit/bdfacf7a90dfc8aa35e6238a1a8376ef661b7c6b))
+
 ## [0.5.0](https://github.com/linc-technologies/ember-tinymce/compare/ember-tinymce-v0.4.2...ember-tinymce-v0.5.0) (2026-06-22)
 
 
