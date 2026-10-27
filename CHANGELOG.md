@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.6.1](https://github.com/linc-technologies/ember-tinymce/compare/ember-tinymce-v0.6.0...ember-tinymce-v0.6.1) (2026-10-26)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/checkout from 6 to 7 ([#72](https://github.com/linc-technologies/ember-tinymce/issues/72)) ([563c006](https://github.com/linc-technologies/ember-tinymce/commit/563c0066fc40cc132276038e22be550ff434d92b))
+* **deps:** bump actions/setup-node from 6 to 7 ([#75](https://github.com/linc-technologies/ember-tinymce/issues/75)) ([7495353](https://github.com/linc-technologies/ember-tinymce/commit/7495353bf4c3850d8e88b572cdabcea235bcc851))
+* **deps:** bump compression from 1.7.4 to 1.8.2 ([#83](https://github.com/linc-technologies/ember-tinymce/issues/83)) ([8be592f](https://github.com/linc-technologies/ember-tinymce/commit/8be592f506edc5f1f78a51b95ad24d728d283786))
+* **deps:** bump follow-redirects from 1.16.0 to 1.16.2 ([#88](https://github.com/linc-technologies/ember-tinymce/issues/88)) ([33ff41d](https://github.com/linc-technologies/ember-tinymce/commit/33ff41db3a8840015d0ce1e646ca73b0c09e5891))
+* **deps:** bump googleapis/release-please-action from 4 to 5 ([#70](https://github.com/linc-technologies/ember-tinymce/issues/70)) ([2379a21](https://github.com/linc-technologies/ember-tinymce/commit/2379a214a0641cbd535b1fa002682689093d1230))
+* **deps:** bump handlebars from 4.7.9 to 4.7.10 ([#84](https://github.com/linc-technologies/ember-tinymce/issues/84)) ([d318c01](https://github.com/linc-technologies/ember-tinymce/commit/d318c016bcfc06018c14274b42a2233abc40950c))
+* **deps:** bump proxy-addr from 2.0.7 to 2.0.8 ([#85](https://github.com/linc-technologies/ember-tinymce/issues/85)) ([937273d](https://github.com/linc-technologies/ember-tinymce/commit/937273dbbf6192522c532ad431abb88a867844e0))
+
 ## [0.6.0](https://github.com/linc-technologies/ember-tinymce/compare/ember-tinymce-v0.5.0...ember-tinymce-v0.6.0) (2026-08-07)
 
 
